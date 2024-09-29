@@ -31,10 +31,10 @@ We present AgriCLIP, a vision-language foundational model dedicated to the domai
 
 
 ## 🏆 Contributions
-1. We develop Palo: **the first multilingual Large Multimodal Model (LMM)**, capable of generating responses in **10 languages**.
-2. We created an extensive multilingual instruction-tuning dataset (~2.1M instructions) by translating LLaVA-Instruct-150K.
-3. We train models across three distinct scales i.e., 1.7B, 7B, and 13B parameters to demonstrate the scalability of our training pipeline. The models demonstrate good performance on low-resource languages, e.g., Hindi, Arabic, Bengali, and Urdu, without compromising its high-performance on high-resource languages e.g., English, Chinese, French, and Spanish.
-
+1. Our primary contribution is the creation of a large, diverse image-text dataset derived solely from vision-based agricultural datasets. 
+2. Our second contribution is a training pipeline that combines image-text contrastive and image-only self-supervised learning to boost global semantic features with fine-grained visual details.
+3. We followed three-stage training pipeline, combining contrastive learning, DINO-based training, and encoders alignment to capture both global semantic and local fine-grained features.
+4. We conduct comprehensive evaluation on different downstream tasks demonstrating AgriCLIP's effectiveness in zero-shot performance.
 
 ## 📂 PALO Multi-Lingual Dataset Access
 We develop a diverse instruction set (~2.1M instructions) comprising conversations from ten  languages. Specifically, 665K instructions from LLaVA-Instruct-665K are used for English, and approximately 150K conversations from LLaVA-Instruct-150K are translated to Chinese, French, Spanish, Russian, Japanese, Arabic, Hindi, Bengali and Urdu using our proposed semi-automated translation pipeline.
