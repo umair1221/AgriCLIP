@@ -1,37 +1,32 @@
-# AgriClip
-This repository provides the source code for the AgriCLIP.
-# 🌍 PALO: A Polyglot Large Multimodal Model for 5B People (WACV 2025)
+# AgriCLIP: Adapting CLIP for Agriculture and Livestock via Domain-Specialized Cross-Model Alignment
 
 <p align="center">
     <img src="https://i.imgur.com/waxVImv.png" alt="Oryx Video-ChatGPT">
 </p>
 
-#### [Hanoona Rasheed](https://www.hanoonarasheed.com/), [Muhammad Maaz](https://www.muhammadmaaz.com), [Abdelrahman Shaker](https://amshaker.github.io), [Salman Khan](https://salman-h-khan.github.io/), [Hisham Cholakkal](https://scholar.google.ae/citations?user=bZ3YBRcAAAAJ&hl=fr), [Rao M. Anwer](https://scholar.google.fi/citations?user=_KlvMVoAAAAJ&hl=en), [Timothy Baldwin](https://eltimster.github.io/www), [Michael Felsberg](https://people.isy.liu.se/cvl/mfe/) and [Fahad Khan](https://sites.google.com/view/fahadkhans/home)
+#### [Umair Nawaz](https://scholar.google.com/citations?user=w7N4wSYAAAAJ&hl=en), [Awais Muhammad](https://scholar.google.com/citations?user=bA-9t1cAAAAJ&hl=en), [Hanan Gani](https://hananshafi.github.io/), [Muzammal Naseer](https://muzammal-naseer.com/), [Fahad Khan](https://sites.google.com/view/fahadkhans/home), [Salman Khan](https://salman-h-khan.github.io/), [Rao M. Anwer](https://scholar.google.fi/citations?user=_KlvMVoAAAAJ&hl=en)y
 
-### Vision-language conversation in 10 languages including English, Chinese, French, Spanish, Russian, Japanese, Arabic, Hindi, Bengali and Urdu
+### AgriCLIP, a vision-language foundational model dedicated to the domain of agriculture and livestock
 
 [![Demo](https://img.shields.io/badge/Online-Demo-red)](https://palo.mbzuai-oryx.ngrok.app)
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2402.14818)
-[![Dataset](https://img.shields.io/badge/Dataset-Access-87CEEB)](https://huggingface.co/datasets/MBZUAI/palo_multilingual_dataset)
+[![Dataset](https://img.shields.io/badge/Dataset-Access-87CEEB)](https://mbzuaiac-my.sharepoint.com/my?login_hint=Umair%2ENawaz%40mbzuai%2Eac%2Eae&id=%2Fpersonal%2Fumair%5Fnawaz%5Fmbzuai%5Fac%5Fae%2FDocuments%2FAgriCLIP%2FDataset)
 
 ---
 
 ## 📢 Latest Updates
-- **Aug-30-24**: PALO has been accepted at WACV 2025. 🔥🔥
-- **Mar-25-24**: PALO training and evaluation codes, and pretrained checkpoints are released. 🔥🔥
-- **Mar-03-24**: PALO multi-lingual evaluation dataset is released. Check it out at [MBZUAI/multilingual-llava-bench-in-the-wild](https://huggingface.co/datasets/MBZUAI/multilingual-llava-bench-in-the-wild). 🔥🔥
-- **Feb-27-24**: PALO multi-lingual training dataset is released. Check it out at [MBZUAI/palo_multilingual_dataset](https://huggingface.co/datasets/MBZUAI/palo_multilingual_dataset). 🔥🔥
-- **Feb-23-24**: PALO paper and online demo are released. Code, pretrained models and training/evaluation scripts are coming soon!
+
+- **Sep-30-24**: AgriCLIP paper, online demo, and the code are released.
 
 ---
 
 ## Overview
 
-In pursuit of more inclusive Vision-Language Models (VLMs), this study introduces a Large Multilingual Multimodal Model called PALO. PALO offers visual reasoning capabilities in 10 major languages, including English, Chinese, Hindi, Spanish, French, Arabic, Bengali, Russian, Urdu, and Japanese, that span a total of ~5B people (65% of the world population).
+We present AgriCLIP, a vision-language foundational model dedicated to the domain of agriculture and livestock. First, we propose a large-scale dataset, named ALive, that leverages customized prompt generation strategy to overcome the scarcity of expert annotations. Our ALive dataset covers crops, livestock, and fishery, with around 600,000 image-text pairs. Second, we propose a training pipeline that integrates both contrastive and self-supervised learning to learn both global semantic and local fine-grained domain-specialized features. Experiments on diverse set of 20 downstream tasks demonstrate the effectiveness of AgriCLIP framework
 
 
 <p align="center">
-  <img src="images/palo_block_and_intro_diagram.png" alt="Palo Results">
+  <img src="images/AgriCLIP-New-V3.pdf" alt="Palo Results">
 </p>
 
 
