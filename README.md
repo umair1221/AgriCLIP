@@ -26,7 +26,7 @@ We present AgriCLIP, a vision-language foundational model dedicated to the domai
 
 
 <p align="center">
-  <img src="images/AgriCLIP-New-V3.pdf" alt="Palo Results">
+  <img src="images/AgriCLIP-Framework.png" alt="Palo Results">
 </p>
 
 
