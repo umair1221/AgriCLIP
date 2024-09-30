@@ -8,6 +8,7 @@ from LinearAligner import LinearAligner
 import clip
 import scipy
 import os
+import open_clip
 
 IMAGENET_MEAN = [0.485, 0.456, 0.406]
 IMAGENET_STD = [0.229, 0.224, 0.225]
@@ -18,6 +19,12 @@ CLIP_IMAGENET_TRANSFORMATION = transforms.Compose([transforms.Resize(224), trans
 class ClipZeroShot(torch.nn.Module):
     def __init__(self, mtype):
         super(ClipZeroShot, self).__init__()
+
+        if mtype != 'ViT-B/16':
+            self.clip_model, _, self.clip_preprocess = open_clip.create_model_and_transforms(
+                'ViT-B-16', 
+                pretrained='/checkpoints/epoch_30.pt'
+            )
         self.clip_model, self.clip_preprocess = clip.load(mtype)
         self.to_pil = transforms.ToPILImage()
         self.mtype = mtype
