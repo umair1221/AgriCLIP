@@ -191,6 +191,14 @@ bash scripts/eval/eval_all_languages.sh <path to the trained model> <Output file
   <img src="images/palo_demo_2.png" alt="Palo Sample">
 </p> -->
 
+
+## Acknowledgements :pray:
+
++ [Text2Concept](https://github.com/k1rezaei/Text-to-concept): Our approach is inspired from this work. We are thankful for their Cross-Model alignment code.
++ [Dino](https://github.com/facebookresearch/dino): Provides with the capability of using self-supervised training.
++ [CLIP](https://github.com/mlfoundations/open_clip): A good resource for zero-shot classification using text prompts.
+
+
 ## 📜 Citation
 ```bibtex
 
