@@ -1,5 +1,12 @@
+import argparse
 import os
 import gdown
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Download datasets from Google Drive and save them to a specified directory.')
+    parser.add_argument('--output-dir', type=str, default='./Dataset/Downstream-Data',
+                        help='Directory where datasets will be saved')
+    return parser.parse_args()
 
 # Dictionary of dataset names and corresponding Google Drive links
 datasets = {
@@ -8,14 +15,11 @@ datasets = {
     "Dataset3": "https://drive.google.com/uc?id=your_drive_id_3"
 }
 
-# Folder to store all datasets
-data_dir = "datasets"
-os.makedirs(data_dir, exist_ok=True)
-
-def download_datasets():
+def download_datasets(output_dir):
+    os.makedirs(output_dir, exist_ok=True)  # Ensure the directory exists
     for dataset_name, dataset_link in datasets.items():
         # Create a folder for each dataset
-        dataset_folder = os.path.join(data_dir, dataset_name)
+        dataset_folder = os.path.join(output_dir, dataset_name)
         os.makedirs(dataset_folder, exist_ok=True)
         
         # Define the output path for the downloaded file
@@ -28,4 +32,5 @@ def download_datasets():
         print(f"{dataset_name} downloaded and saved in {dataset_folder}")
 
 if __name__ == "__main__":
-    download_datasets()
+    args = parse_args()
+    download_datasets(args.output_dir)

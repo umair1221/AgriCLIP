@@ -72,6 +72,16 @@ pip install -r requirements.txt
 export PYTHONPATH="./:$PYTHONPATH"
 ```
 
+## 🔧 Download Dataset
+Downstream datasets can either be downloaded manually or by using the script below:
+
+```bash
+pip install gdown 
+
+python Dataset/download_downstream.py --output-dir "/path/to/your/dataset/storage"
+
+```
+
 ## 💿 Perform Zero-Shot Classification on AgriCLIP
 Please use the below command to perform zero-shot inference on AgriCLIP.
 
@@ -83,18 +93,6 @@ python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "/path/to/your/classi
                                    --prompt-template "a photo contain {} deficiency"
 
 ```
-
-**2. Launch a gradio web server.**
-```bash
-python palo/serve/gradio_web_server.py --controller http://localhost:10000 --model-list-mode reload
-
-```
-**3. Launch a model worker**
-```bash
-python palo/serve/model_worker.py --host 0.0.0.0 --controller http://localhost:10000 --port 40000 --worker http://localhost:40000 --model-path MBZUAI/PALO-13B
-```
-
-You can launch as many workers as you want, and compare between different model checkpoints in the same Gradio interface. Please keep the `--controller` the same, and modify the `--port` and `--worker` to a different port number for each worker.
 
 ## 🚋 Training
 **1. Prepare data**
