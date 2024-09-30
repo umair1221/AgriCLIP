@@ -4,7 +4,7 @@
     <img src="https://i.imgur.com/waxVImv.png" alt="Oryx Video-ChatGPT">
 </p>
 
-#### [Umair Nawaz](https://scholar.google.com/citations?user=w7N4wSYAAAAJ&hl=en), [Awais Muhammad](https://scholar.google.com/citations?user=bA-9t1cAAAAJ&hl=en), [Hanan Gani](https://hananshafi.github.io/), [Muzammal Naseer](https://muzammal-naseer.com/), [Fahad Khan](https://sites.google.com/view/fahadkhans/home), [Salman Khan](https://salman-h-khan.github.io/), [Rao M. Anwer](https://scholar.google.fi/citations?user=_KlvMVoAAAAJ&hl=en)y
+#### [Umair Nawaz](https://scholar.google.com/citations?user=w7N4wSYAAAAJ&hl=en), [Awais Muhammad](https://scholar.google.com/citations?user=bA-9t1cAAAAJ&hl=en), [Hanan Gani](https://hananshafi.github.io/), [Muzammal Naseer](https://muzammal-naseer.com/), [Fahad Khan](https://sites.google.com/view/fahadkhans/home), [Salman Khan](https://salman-h-khan.github.io/), [Rao M. Anwer](https://scholar.google.fi/citations?user=_KlvMVoAAAAJ&hl=en)
 
 ### AgriCLIP, a vision-language foundational model dedicated to the domain of agriculture and livestock
 
@@ -48,37 +48,39 @@ To evaluate the performance of AgriCLIP, we assemble a set of 20 datasets (Downs
 
 
 
-## 🧠 Model Zoo
+<!-- ## 🧠 Model Zoo
 | Model Name       | HuggingFace Link                                     |
 |------------------|------------------------------------------------------|
 | MobilePALO-1.7B  | [MBZUAI/MobilePALO-1.7B](https://huggingface.co/MBZUAI/MobilePALO-1.7B) |
 | PALO-7B          | [MBZUAI/PALO-7B](https://huggingface.co/MBZUAI/PALO-7B)   |
 | PALO-13B         | [MBZUAI/PALO-13B](https://huggingface.co/MBZUAI/PALO-13B) |
-
+ -->
 
 ## 🔧 Installation
 We recommend setting up a conda environment for the project:
 
 ```bash
-conda create --name=palo python=3.10
-conda activate palo
+conda create --name=agriclip python=3.10
+conda activate agriclip
 
-git clone https://github.com/mbzuai-oryx/PALO
-cd PALO
+git clone https://github.com/umair1221/AgriCLIP.git
+cd AgriCLIP
 
 pip install -r requirements.txt
-pip instal flash-attn==2.3.2
+
 
 export PYTHONPATH="./:$PYTHONPATH"
 ```
 
-## 💿 Running Demo Offline
-Please follow the instructions below to run the PALO demo on your local GPU machine.
-
-**1. Launch a controller**
+## 💿 Perform Zero-Shot Classification on AgriCLIP
+Please use the below command to perform zero-shot inference on AgriCLIP.
 
 ```bash
-python palo/serve/controller.py --host 0.0.0.0 --port 10000
+python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "/path/to/your/classification/dataset" \
+                                   --aligner-path "Weights/Aligned_Models/Agri_Dino_aligner_DPT_CPT.pth" \
+                                   --batch-size 32 \
+                                   --num-workers 4 \
+                                   --prompt-template "a photo contain {} deficiency"
 
 ```
 
