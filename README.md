@@ -43,6 +43,10 @@ We gather 25 training datasets across crops, fish, and livestock, creating the *
 
 To evaluate the performance of AgriCLIP, we assemble a set of 20 datasets (Downstream data) to test the model’s ability to generalize to unseen concepts. The evaluation set is entirely disjoint from the ALive pre-training set. 
 
+<p align="center">
+  <img src="images/Ablation_Datasets_Abl.png" alt="ALive Samples">
+</p>
+
 📥 **Download the Downstream data:** Access our downstream dataset: [Downstream Dataset](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/EtBkCGt_RC1Nul63LctwEJoBoHsOngYkcsZ7Ls833rNjfw?e=TGsLjC).
 
 
