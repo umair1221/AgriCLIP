@@ -47,6 +47,10 @@ To evaluate the performance of AgriCLIP, we assemble a set of 20 datasets (Downs
   <img src="images/Ablation_Datasets_Abl.png" alt="ALive Samples">
 </p>
 
+<p align="center">
+  <img src="images/Prompts-Comparison.png" alt="Comparison of Prompts">
+</p>
+
 📥 **Download the Downstream data:** Access our downstream dataset: [Downstream Dataset](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/EtBkCGt_RC1Nul63LctwEJoBoHsOngYkcsZ7Ls833rNjfw?e=TGsLjC).
 
 
