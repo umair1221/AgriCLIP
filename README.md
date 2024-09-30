@@ -97,35 +97,20 @@ python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "/path/to/your/classi
 ## 🚋 Training
 **1. Prepare data**
 
-Please download the annotations from [MBZUAI/palo_multilingual_dataset](https://huggingface.co/datasets/MBZUAI/palo_multilingual_dataset) and all images following the below links.
+Please download the dataset from [ALive Dataset](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/Ev3ZGFeLw8JPkda2RcRv_e0BLXqi20bFRhA2kISEwEQSXw?e=LWNBHD).
 
 
-- COCO: [train2017](http://images.cocodataset.org/zips/train2017.zip)
-- GQA: [images](https://downloads.cs.stanford.edu/nlp/data/gqa/images.zip)
-- OCR-VQA: [download script](https://drive.google.com/drive/folders/1_GYPY5UkUy7HIcR0zq3ZCFgeZN7BAfm_?usp=sharing),
-- TextVQA: [train_val_images](https://dl.fbaipublicfiles.com/textvqa/images/train_val_images.zip)
-- VisualGenome: [part1](https://cs.stanford.edu/people/rak248/VG_100K_2/images.zip), [part2](https://cs.stanford.edu/people/rak248/VG_100K_2/images2.zip)
-
-After downloading all of them, organize the data as follows in `./playground/data`,
-
-```
-data
-    ├── coco
-    │   └── train2017
-    ├── gqa
-    │   └── images
-    ├── ocr_vqa
-    │   └── images
-    ├── textvqa
-    │   └── train_images
-    └── vg
-        ├── VG_100K
-        └── VG_100K_2
-    ├── palo_multilingual_dataset
-        ├── palo_multilingual_dataset.json
+After downloading, the next step is to get the features representations for both the models i.e., the DINO and the CLIP.
+Then run the following command to get the aligned model as an output which will be then used for the zero-shot evaluation.
+```bash
+python AgriCLIP_alignment/train_linear_aligner.py --data-path "/path/to/your/dataset" \
+                               --dino-weights-path "/path/to/your/dino_pretrain.pth" \
+                               --clip-weights-path "/path/to/your/dino_pretrain.pth" \
+                               --path-dino-features "/path/to/your/dino_features.npy" \
+                               --path-clip-features "/path/to/your/clip_features.npy" \
+                               --output-model-path "./path/to/save/aligned_model.pth"
 ```
 
-Please note that all images should be in the `.jpg` format.
 
 **2. Download Pretrained Projection Weights**
 
