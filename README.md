@@ -72,27 +72,6 @@ pip install -r requirements.txt
 export PYTHONPATH="./:$PYTHONPATH"
 ```
 
-## 🔧 Download Dataset
-Downstream datasets can either be downloaded manually or by using the script below:
-
-```bash
-pip install gdown 
-
-python Dataset/download_downstream.py --output-dir "/path/to/your/dataset/storage"
-
-```
-
-## 💿 Perform Zero-Shot Classification on AgriCLIP
-Please use the below command to perform zero-shot inference on AgriCLIP.
-
-```bash
-python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "/path/to/your/classification/dataset" \
-                                   --aligner-path "Weights/Aligned_Models/Agri_Dino_aligner_DPT_CPT.pth" \
-                                   --batch-size 32 \
-                                   --num-workers 4 \
-                                   --prompt-template "a photo contain {} deficiency"
-
-```
 
 ## 🚋 Training
 **1. Prepare data**
@@ -110,6 +89,28 @@ python AgriCLIP_alignment/train_linear_aligner.py --data-path "/path/to/your/dat
                                --path-clip-features "/path/to/your/clip_features.npy" \
                                --output-model-path "./path/to/save/aligned_model.pth"
 ```
+
+## 🔧 Download Downstream Dataset
+Downstream datasets can either be downloaded manually or by using the script below:
+
+```bash
+pip install gdown 
+
+python Dataset/download_downstream.py --output-dir "/path/to/your/dataset/storage"
+
+```
+## 💿 Perform Zero-Shot Classification on AgriCLIP
+Please use the below command to perform zero-shot inference on AgriCLIP.
+
+```bash
+python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "/path/to/your/classification/dataset" \
+                                   --aligner-path "Weights/Aligned_Models/Agri_Dino_aligner_DPT_CPT.pth" \
+                                   --batch-size 32 \
+                                   --num-workers 4 \
+                                   --prompt-template "a photo contain {} deficiency"
+
+```
+
 
 
 **2. Download Pretrained Projection Weights**
