@@ -45,6 +45,17 @@ def main():
 
     # Initialize TextToConcept with the model
     model = torch.hub.load('facebookresearch/dino:main', 'dino_resnet50', pretrained=True)
+    model.load_state_dict(torch.load(local_repo_path , weights_only=True))
+    def forward_features(x):
+        # Assuming the model returns the last layer's output which might include a classification token or similar
+        features = model(x)  # This call should be adjusted based on the actual output format
+        # You might need to process the features here, e.g., selecting the right tensor or applying global pooling
+        return features.squeeze()  # Adjust this based on the actual structure of your features
+
+
+    # Attach the custom forward method to the model
+    model.forward_features = forward_features
+
     model.to(device)
     text_to_concept = TextToConcept(model, 'Dino')
     text_to_concept.load_linear_aligner(args.aligner_path)
