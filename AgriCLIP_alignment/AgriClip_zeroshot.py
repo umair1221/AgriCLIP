@@ -7,26 +7,33 @@ from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from TextToConcept import TextToConcept
+# Import the dictionary from prompt.py
+from AgriCLIP_alignment.prompts import prompts_dict
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Script for zero-shot classification using a trained aligner.')
-    parser.add_argument('--data-path', type=str, default='/home/umair.nawaz/Research_Work/Main-DATA/My_Surgical/downstream/crops/dataset_22',
+    parser.add_argument('--dataset-name', type=str, default=None,
+                        help='Name of the dataset which selects the prompt template')
+    parser.add_argument('--data-path', type=str, default='/path/to/dataset',
                         help='Path to the dataset directory')
-    parser.add_argument('--dino-path', type=str, default='/home/umair.nawaz/Research_Work/Submission/AgriCLIP/Weights/dino_pretrain.pth',
-                        help='Path to the dataset directory')
-    parser.add_argument('--aligner-path', type=str, 
-                        default='/home/umair.nawaz/Research_Work/Submission/AgriClip/Weights/Aligned_Models/Agri_Dino_aligner_DPT_CPT.pth',
-                        help='Path to the trained aligner model')
+    parser.add_argument('--dino-path', type=str, default='/path/to/dino.pth',
+                        help='Path to DINO model')
+    parser.add_argument('--aligner-path', type=str, default='/path/to/aligner.pth',
+                        help='Path to the aligner model')
     parser.add_argument('--batch-size', type=int, default=32,
                         help='Batch size for the DataLoader')
     parser.add_argument('--num-workers', type=int, default=8,
                         help='Number of workers for the DataLoader')
-    parser.add_argument('--prompt-template', type=str, default='a photo contain {} deficiency',
+    parser.add_argument('--prompt-template', type=str, default=None,
                         help='Template for generating prompts for zero-shot classification')
     return parser.parse_args()
 
 def main():
     args = parse_args()
+
+    # Select the prompt based on dataset name or use the provided prompt template
+    if args.prompt_template is None and args.dataset_name:
+        args.prompt_template = prompts_dict.get(args.dataset_name, 'a photo of {}')  # Default prompt if not found
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
