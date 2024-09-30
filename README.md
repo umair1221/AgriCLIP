@@ -75,7 +75,6 @@ cd AgriCLIP
 
 pip install -r requirements.txt
 
-
 export PYTHONPATH="./:$PYTHONPATH"
 ```
 
@@ -110,7 +109,7 @@ python Dataset/download_downstream.py --output-dir "/path/to/your/dataset/storag
 Please use the below command to perform zero-shot inference on AgriCLIP.
 
 ```bash
-python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "/path/to/your/classification/dataset" \
+python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "Dataset/Downstream-Data/Banana Deficiency" \
                                    --aligner-path "Weights/Aligned_Models/Agri_Dino_aligner_DPT_CPT.pth" \
                                    --batch-size 32 \
                                    --num-workers 4 \

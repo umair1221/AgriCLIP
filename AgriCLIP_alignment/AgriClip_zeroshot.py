@@ -12,7 +12,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Script for zero-shot classification using a trained aligner.')
     parser.add_argument('--data-path', type=str, default='/home/umair.nawaz/Research_Work/Main-DATA/My_Surgical/downstream/crops/dataset_22',
                         help='Path to the dataset directory')
-    parser.add_argument('--dino-path', type=str, default='/home/umair.nawaz/Research_Work/Submission/AgriClip/Weights/dino_pretrain.pth',
+    parser.add_argument('--dino-path', type=str, default='/home/umair.nawaz/Research_Work/Submission/AgriCLIP/Weights/dino_pretrain.pth',
                         help='Path to the dataset directory')
     parser.add_argument('--aligner-path', type=str, 
                         default='/home/umair.nawaz/Research_Work/Submission/AgriClip/Weights/Aligned_Models/Agri_Dino_aligner_DPT_CPT.pth',
