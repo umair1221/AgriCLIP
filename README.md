@@ -109,11 +109,12 @@ python Dataset/download_downstream.py --output-dir "/path/to/your/dataset/storag
 Please use the below command to perform zero-shot inference on AgriCLIP.
 
 ```bash
-python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "Dataset/Downstream-Data/Banana Deficiency" \
-                                   --aligner-path "Weights/Aligned_Models/Agri_Dino_aligner_DPT_CPT.pth" \
-                                   --batch-size 32 \
-                                   --num-workers 4 \
-                                   --prompt-template "a photo contain {} deficiency"
+python AgriCLIP_alignment/AgriClip_zeroshot.py --dataset-name "Banana Deficiency" \
+              --data-path "/path/to/dataset" \
+              --dino-path "Weights/dino_pretrain.pth" \
+              --aligner-path "/Weights/Aligned_Models/Agri_Dino_aligner_DPT_CPT.pth" \
+              --batch-size 32 \
+              --num-workers 4
 
 ```
 
@@ -136,58 +137,6 @@ python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "Dataset/Downstream-D
 | DINO  | [Features representations for ALive Data for alignment purpose](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/EdZlaeWmuFNPnjoshCtI3A0BKvTbqfVPA-Y2KrePcaKY1g?e=0qH2af) |
 | CLIP  | [Features representations for ALive Data for alignment purpose](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/EWm2lNa2c9tNg9G37UoirQcB9RtC_66N_TkLCyry4Y9DQg?e=Drsd7u)                 |
 
-
-<!-- 
-**3. Run Training**
-
-```bash
-# For MobilePALO-1.7B
-bash scripts/train/finetune_palo.sh "mtgv/MobileLLaMA-1.4B-Chat" "data/palo_multilingual_dataset/palo_multilingual_dataset.json" <path to palo_1.7B_stage1_mm_projector.bin> "ldpnet" "results/PALO-1.7B" "2" "2e-5"
-
-# For PALO-7B
-bash scripts/train/finetune_lora_palo.sh "lmsys/vicuna-7b-v1.5" "data/palo_multilingual_dataset/palo_multilingual_dataset.json" <path to llava-v1.5-mlp2x-336px-pretrain-vicuna-7b-v1.5.bin> "mlp2x_gelu" "results/PALO-7B" "3" "2e-4"
-
-# For PALO-13B
-bash scripts/train/finetune_lora_palo.sh "lmsys/vicuna-13b-v1.5" "data/palo_multilingual_dataset/palo_multilingual_dataset.json" <path to llava-v1.5-mlp2x-336px-pretrain-vicuna-13b-v1.5.bin> "mlp2x_gelu" "results/PALO-13B" "3" "2e-4"
-```
-
-## 📊 Quantitative Evaluation
-Please download PALO multi-lingual evaluation data from [MBZUAI/MBZUAI/multilingual-llava-bench-in-the-wild](https://huggingface.co/datasets/MBZUAI/multilingual-llava-bench-in-the-wild) and arrange it as follows,
-
-```
-data
-    ├── multilingual-llava-bench-in-the-wild 
-        ├── arabic
-            ├── question.jsonl
-            ├── answers.jsonl
-            ├── context.jsonl
-        ├── bengali
-            ├── question.jsonl
-            ├── answers.jsonl
-            ├── context.jsonl
-        ...
-        ...
-        ...
-```
-Use the following scripts to perform evaluation,
-
-```bash
-bash scripts/eval/eval_all_languages.sh <path to the trained model> <Output file name> <OpenAI API Key>
-```
-
-<p align="center">
-  <img src="images/palo_quant_results.png" alt="Palo Results">
-</p>
-
-## 📚 Qualitative Examples of Multilingual Capabilities
-
-<p align="center">
-  <img src="images/palo_demo_1.png" alt="Palo Sample">
-</p>
-
-<p align="center">
-  <img src="images/palo_demo_2.png" alt="Palo Sample">
-</p> -->
 
 
 ## Acknowledgements :pray:
