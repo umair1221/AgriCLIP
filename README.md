@@ -201,10 +201,5 @@ bash scripts/eval/eval_all_languages.sh <path to the trained model> <Output file
 ## 📜 Citation
 ```bibtex
 
-    @inproceedings{PALO,
-        title={Palo: A Large Multilingual Multimodal Language Model},
-        author={Rasheed, Hanoona and Maaz, Muhammad and Shaker, Abdelrahman and Khan, Salman and Cholakal, Hisham and Anwer, Rao M. and Baldwin, Tim and Felsberg, Michael and Khan, Fahad S.},
-        booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2025)},
-        year={2025}
-    }
+    TBA
 ```
