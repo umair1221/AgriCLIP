@@ -22,7 +22,7 @@
 
 ## Overview
 
-We present AgriCLIP, a vision-language foundational model dedicated to the domain of agriculture and livestock. First, we propose a large-scale dataset, named ALive, that leverages customized prompt generation strategy to overcome the scarcity of expert annotations. Our ALive dataset covers crops, livestock, and fishery, with around 600,000 image-text pairs. Second, we propose a training pipeline that integrates both contrastive and self-supervised learning to learn both global semantic and local fine-grained domain-specialized features. Experiments on diverse set of 20 downstream tasks demonstrate the effectiveness of AgriCLIP framework
+We present AgriCLIP, a vision-language foundational model dedicated to the domain of agriculture and livestock. First, we propose a large-scale dataset, named ALive, that leverages customized prompt generation strategy to overcome the scarcity of expert annotations. Our ALive dataset covers crops, livestock, and fishery, with around 600,000 image-text pairs. Second, we propose a training pipeline that integrates both contrastive and self-supervised learning to learn both global semantic and local fine-grained domain-specialized features. Experiments on diverse set of 20 downstream tasks demonstrate the effectiveness of AgriCLIP framework.
 
 
 <p align="center">
@@ -36,14 +36,14 @@ We present AgriCLIP, a vision-language foundational model dedicated to the domai
 3. We followed three-stage training pipeline, combining contrastive learning, DINO-based training, and encoders alignment to capture both global semantic and local fine-grained features.
 4. We conduct comprehensive evaluation on different downstream tasks demonstrating AgriCLIP's effectiveness in zero-shot performance.
 
-## 📂 PALO Multi-Lingual Dataset Access
-We develop a diverse instruction set (~2.1M instructions) comprising conversations from ten  languages. Specifically, 665K instructions from LLaVA-Instruct-665K are used for English, and approximately 150K conversations from LLaVA-Instruct-150K are translated to Chinese, French, Spanish, Russian, Japanese, Arabic, Hindi, Bengali and Urdu using our proposed semi-automated translation pipeline.
+## 📂 ALive Dataset Access
+We gather 25 training datasets across crops, fish, and livestock, creating the **A**griculture and **Live**stock (ALive) dataset with 600k images covering a wide range of conditions. This includes various crop growth stages, classifications, and different farming environments for animals and fish. Next, we design a customized prompt generation strategy where the text based on dataset and class-level information is leveraged to provide context and fine-grained details for each image. For instance, instead of using a generic CLIP prompt like “a photo of a boron-deficient leaf,” we craft prompts like “a photo of a leaf with boron deficiency, characterized by yellow patches and curled edges.” We then use GPT-4 to generate diverse variation of these prompts.
 
-📥 **Download the Training Dataset:** Access our multi-lingual dataset on Hugging Face: [MBZUAI/palo_multilingual_dataset](https://huggingface.co/datasets/MBZUAI/palo_multilingual_dataset).
+📥 **Download the Pre-Training Dataset:** Access our pre-training dataset: [ALive Dataset.zip](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/Ev3ZGFeLw8JPkda2RcRv_e0BLXqi20bFRhA2kISEwEQSXw?e=LWNBHD).
 
-We also develop a multi-lingual evaluation set to conduct a comprehensive evaluation across various languages. This set is constructed by translating the LLaVA-Bench  into all target languages using GPT-4-Turbo, with particular attention to preserving linguistic authenticity and mitigating common issues of automated translations through careful human correction.
+To evaluate the performance of AgriCLIP, we assemble a set of 20 datasets (Downstream data) to test the model’s ability to generalize to unseen concepts. The evaluation set is entirely disjoint from the ALive pre-training set. 
 
-📥 **Download the Evaluation Dataset:** Access our multi-lingual evaluation dataset on Hugging Face: [MBZUAI/MBZUAI/multilingual-llava-bench-in-the-wild](https://huggingface.co/datasets/MBZUAI/multilingual-llava-bench-in-the-wild).
+📥 **Download the Downstream data:** Access our downstream dataset: [MBZUAI/MBZUAI/multilingual-llava-bench-in-the-wild](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/EtBkCGt_RC1Nul63LctwEJoBoHsOngYkcsZ7Ls833rNjfw?e=TGsLjC).
 
 
 
