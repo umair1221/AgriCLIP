@@ -113,13 +113,24 @@ python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "/path/to/your/classi
 
 
 
-**2. Download Pretrained Projection Weights**
+## 💿 Model Zoo
 
-| Model Name       | Projector Weights                                                       |
+| Model Name       | Weights                                                       |
 |------------------|-------------------------------------------------------------------------|
-| MobilePALO-1.7B  | [MBZUAI/palo_1.7B_stage1_mm_projector](https://huggingface.co/MBZUAI/palo_1.7B_stage1_mm_projector) |
-| PALO-7B          | [liuhaotian/llava-v1.5-mlp2x-336px-pretrain-vicuna-7b-v1.5](https://huggingface.co/liuhaotian/llava-v1.5-mlp2x-336px-pretrain-vicuna-7b-v1.5)                 |
-| PALO-13B         | [liuhaotian/llava-v1.5-mlp2x-336px-pretrain-vicuna-13b-v1.5](https://huggingface.co/liuhaotian/llava-v1.5-mlp2x-336px-pretrain-vicuna-13b-v1.5)               |
+| DINO  | [Pre-Trained Dino Weights](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/EiNWyUYcY61Emgn8uPcRuuUBb1JS79UhxYEwbCaeeFokgg?e=x7YJZW) |
+| AgriCLIP         | [Aligned AgriCLIP Weights with Pre-Trained DINO and CLIP](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/EaSxj1qqeblBoK-e4ye7JjUBkZZHQx6NiVIvBs5104gLCg?e=FmQbTQ)                 |
+| AgriCLIP         | [Aligned AgriCLIP Weights with Pre-Trained DINO and Default CLIP](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/EYdN0JsOcLdPpqcBplxK7PwBf0dDrVCQLehAryFKIYbDGA?e=UH0371)                 |
+| AgriCLIP         | [Aligned AgriCLIP Weights with Default DINO and Pre-Trained CLIP](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/ET02EORvYOJMmiEikmq6TCkBUFbEw16UYwOmp1BuWiJYcA?e=OWlCRe)                 |
+| AgriCLIP         | [Aligned AgriCLIP Weights with Default DINO and Default CLIP](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/ERKuUr7UW_lPtdw755_xK4UBH537btY0GqV7f1lnJvATew?e=lDngFn)                 |
+
+
+## Feature Representations
+| Model Name       | Weights                                                       |
+|------------------|-------------------------------------------------------------------------|
+| DINO  | [Features representations for ALive Data for alignment purpose](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/EdZlaeWmuFNPnjoshCtI3A0BKvTbqfVPA-Y2KrePcaKY1g?e=0qH2af) |
+| CLIP  | [Features representations for ALive Data for alignment purpose](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/EWm2lNa2c9tNg9G37UoirQcB9RtC_66N_TkLCyry4Y9DQg?e=Drsd7u)                 |
+
+
 
 **3. Run Training**
 
