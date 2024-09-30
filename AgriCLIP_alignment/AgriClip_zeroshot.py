@@ -12,6 +12,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Script for zero-shot classification using a trained aligner.')
     parser.add_argument('--data-path', type=str, default='/home/umair.nawaz/Research_Work/Main-DATA/My_Surgical/downstream/crops/dataset_22',
                         help='Path to the dataset directory')
+    parser.add_argument('--dino-path', type=str, default='/home/umair.nawaz/Research_Work/Submission/AgriClip/Weights/dino_pretrain.pth',
+                        help='Path to the dataset directory')
     parser.add_argument('--aligner-path', type=str, 
                         default='/home/umair.nawaz/Research_Work/Submission/AgriClip/Weights/Aligned_Models/Agri_Dino_aligner_DPT_CPT.pth',
                         help='Path to the trained aligner model')
@@ -45,7 +47,7 @@ def main():
 
     # Initialize TextToConcept with the model
     model = torch.hub.load('facebookresearch/dino:main', 'dino_resnet50', pretrained=True)
-    model.load_state_dict(torch.load(local_repo_path , weights_only=True))
+    model.load_state_dict(torch.load(args.dino_path , weights_only=True))
     def forward_features(x):
         # Assuming the model returns the last layer's output which might include a classification token or similar
         features = model(x)  # This call should be adjusted based on the actual output format
