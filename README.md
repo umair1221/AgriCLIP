@@ -139,7 +139,7 @@ python AgriCLIP alignment/AgriClip_zeroshot.py --data-path "/path/to/your/classi
 | CLIP  | [Features representations for ALive Data for alignment purpose](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/EWm2lNa2c9tNg9G37UoirQcB9RtC_66N_TkLCyry4Y9DQg?e=Drsd7u)                 |
 
 
-
+<!-- 
 **3. Run Training**
 
 ```bash
@@ -189,7 +189,7 @@ bash scripts/eval/eval_all_languages.sh <path to the trained model> <Output file
 
 <p align="center">
   <img src="images/palo_demo_2.png" alt="Palo Sample">
-</p>
+</p> -->
 
 ## 📜 Citation
 ```bibtex
