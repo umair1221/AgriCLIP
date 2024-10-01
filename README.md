@@ -125,6 +125,7 @@ python AgriCLIP_alignment/AgriClip_zeroshot.py --dataset-name "Banana Deficiency
 | Model Name       | Weights                                                       |
 |------------------|-------------------------------------------------------------------------|
 | DINO  | [Pre-Trained Dino Weights](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/EiNWyUYcY61Emgn8uPcRuuUBb1JS79UhxYEwbCaeeFokgg?e=x7YJZW) |
+| CLIP  | [Pre-Trained CLIP Weights](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/EtQ2bJ1DisdPvSnM-ltH44UBPbrPbAkYVbs2IuQhvyOJOg?e=ZNpPzJ) |
 | AgriCLIP         | [Aligned AgriCLIP Weights with Pre-Trained DINO and CLIP](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/EaSxj1qqeblBoK-e4ye7JjUBkZZHQx6NiVIvBs5104gLCg?e=FmQbTQ)                 |
 | AgriCLIP         | [Aligned AgriCLIP Weights with Pre-Trained DINO and Default CLIP](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/EYdN0JsOcLdPpqcBplxK7PwBf0dDrVCQLehAryFKIYbDGA?e=UH0371)                 |
 | AgriCLIP         | [Aligned AgriCLIP Weights with Default DINO and Pre-Trained CLIP](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/umair_nawaz_mbzuai_ac_ae/ET02EORvYOJMmiEikmq6TCkBUFbEw16UYwOmp1BuWiJYcA?e=OWlCRe)                 |
