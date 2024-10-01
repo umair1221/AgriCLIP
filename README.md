@@ -82,7 +82,7 @@ export PYTHONPATH="./:$PYTHONPATH"
 ## 🚋 Training
 **1. Prepare data**
 
-Please download the dataset from [ALive Dataset](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/Ev3ZGFeLw8JPkda2RcRv_e0BLXqi20bFRhA2kISEwEQSXw?e=LWNBHD).
+Please download the dataset from [ALive Dataset](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/Evc0EuEPvtdJuNYm7gmHVwQBlbBNsYztPhdk9RMSrf6AkQ?e=TqebV0).
 
 
 After downloading, the next step is to get the features representations for both the models i.e., the DINO and the CLIP.
@@ -97,7 +97,7 @@ python AgriCLIP_alignment/train_linear_aligner.py --data-path "/path/to/your/dat
 ```
 
 ## 🔧 Download Downstream Dataset
-Downstream datasets can either be downloaded manually or by using the script below:
+Downstream datasets can either be downloaded manually from here [Downstream-Data](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/Eopq16hBlqpCuGv0UYqqRkIBKXYI-WhQTxmXns4pWw8-qQ?e=0jexM8) or by using the script below:
 
 ```bash
 pip install gdown 
