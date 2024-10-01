@@ -1,5 +1,5 @@
 
-# Self-Supervised Vision Transformers with DINO
+# Using Self-Supervised Model (DINO)
 
 ## Training
 
