@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 from TextToConcept import TextToConcept
 # Import the dictionary from prompt.py
-from AgriCLIP_alignment.prompts import prompts_dict
+from AgriCLIP_alignment.util import prompts_dict
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Script for zero-shot classification using a trained aligner.')
