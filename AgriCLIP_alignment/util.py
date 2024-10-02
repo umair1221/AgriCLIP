@@ -1,4 +1,4 @@
-# prompt.py
+# util.py
 prompts_dict = {
  'Acquarium Fish': "a fish type of {} specie",
  'Animal-2': "a photo with {}",
