@@ -149,7 +149,7 @@ python AgriCLIP_alignment/AgriClip_zeroshot.py --dataset-name "Banana Deficiency
 
 ## 📜 Citation
 ```bibtex
-    @misc{nawaz2024agriclipadaptingclipagriculture,
+    @misc{nawaz2024agriclip,
       title={AgriCLIP: Adapting CLIP for Agriculture and Livestock via Domain-Specialized Cross-Model Alignment}, 
       author={Umair Nawaz and Muhammad Awais and Hanan Gani and Muzammal Naseer and Fahad Khan and Salman Khan and Rao Muhammad Anwer},
       year={2024},
