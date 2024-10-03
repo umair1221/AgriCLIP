@@ -7,15 +7,15 @@
 #### [Umair Nawaz](https://scholar.google.com/citations?user=w7N4wSYAAAAJ&hl=en), [Awais Muhammad](https://scholar.google.com/citations?user=bA-9t1cAAAAJ&hl=en), [Hanan Gani](https://hananshafi.github.io/), [Muzammal Naseer](https://muzammal-naseer.com/), [Fahad Khan](https://sites.google.com/view/fahadkhans/home), [Salman Khan](https://salman-h-khan.github.io/), [Rao M. Anwer](https://scholar.google.fi/citations?user=_KlvMVoAAAAJ&hl=en)
 
 
-[![Demo](https://img.shields.io/badge/Online-Demo-red)](TBA)
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](TBA)
+
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2410.01407)
 [![Dataset](https://img.shields.io/badge/Dataset-Access-87CEEB)](https://mbzuaiac-my.sharepoint.com/my?login_hint=Umair%2ENawaz%40mbzuai%2Eac%2Eae&id=%2Fpersonal%2Fumair%5Fnawaz%5Fmbzuai%5Fac%5Fae%2FDocuments%2FAgriCLIP%2FDataset)
 
 ---
 
 ## 📢 Latest Updates
 
-- **Sep-30-24**: AgriCLIP paper, online demo, and the code are released.
+- **Oct-03-24**: AgriCLIP paper, pretraining dataset, and the code are released.
 
 ---
 
@@ -149,6 +149,13 @@ python AgriCLIP_alignment/AgriClip_zeroshot.py --dataset-name "Banana Deficiency
 
 ## 📜 Citation
 ```bibtex
-
-    TBA
+    @misc{nawaz2024agriclipadaptingclipagriculture,
+      title={AgriCLIP: Adapting CLIP for Agriculture and Livestock via Domain-Specialized Cross-Model Alignment}, 
+      author={Umair Nawaz and Muhammad Awais and Hanan Gani and Muzammal Naseer and Fahad Khan and Salman Khan and Rao Muhammad Anwer},
+      year={2024},
+      eprint={2410.01407},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.01407}, 
+}
 ```
