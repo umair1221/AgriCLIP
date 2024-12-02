@@ -15,6 +15,7 @@
 
 ## 📢 Latest Updates
 
+- **Nov-01-24**: The paper is accepted to COLING 2025.
 - **Oct-03-24**: AgriCLIP paper, pretraining dataset, and the code are released.
 
 ---
