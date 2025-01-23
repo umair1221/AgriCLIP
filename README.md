@@ -8,7 +8,7 @@
 
 
 
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2410.01407)
+[![paper](https://img.shields.io/badge/Paper-<COLOR>.svg)]([https://arxiv.org/abs/2410.01407](https://aclanthology.org/2025.coling-main.644.pdf))
 [![Dataset](https://img.shields.io/badge/Dataset-Access-87CEEB)](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/umair_nawaz_mbzuai_ac_ae/Ev3ZGFeLw8JPkda2RcRv_e0BR6yx25Hr0Pgrxdg6rrNOsA?e=CIuCb5)
 
 ---
